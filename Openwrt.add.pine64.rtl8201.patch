@@ -1,0 +1,19 @@
+--- ./a/target/linux/sunxi/image/cortex-a53.mk	2019-09-16 12:08:48.499512178 +0200
++++ ./b/target/linux/sunxi/image/cortex-a53.mk	2019-09-16 12:48:59.579807666 +0200
+@@ -29,6 +29,16 @@
+ 
+ TARGET_DEVICES += sun50i-h5-nanopi-neo2
+ 
++define Device/sun50i-a64-pine64
++  DEVICE_TITLE:=Pine64 A64
++  SUPPORTED_DEVICES:=pine64,pine64
++  SUNXI_DTS:=allwinner/sun50i-a64-pine64
++  KERNEL_NAME := Image
++  KERNEL := kernel-bin
++endef
++
++TARGET_DEVICES += sun50i-a64-pine64
++
+ define Device/sun50i-a64-pine64-plus
+   DEVICE_VENDOR := Pine64
+   DEVICE_MODEL := Pine64+
